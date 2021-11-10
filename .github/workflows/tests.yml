@@ -29,6 +29,8 @@ jobs:
       uses: supercharge/mongodb-github-action@1.6.0
       with:
         mongodb-version: ${{ matrix.mongodb-version }}
+    - name: backend
+      run: cd backend
     - name: Installing pnpm
       run: npm install -g pnpm
     - name: Installing Dependencies
